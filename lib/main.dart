@@ -24,23 +24,28 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
+        backgroundColor: Colors.yellow,
         appBar: AppBar(
           title: Text('タイトル'),
+          actions: <Widget>[Icon(Icons.add)],
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'Flutterで',
-                style: TextStyle(fontSize: 40),
-              ),
-              Text(
-                'アプリ開発',
-                style: TextStyle(fontSize: 40),
-              )
-            ]
-          )
+        body: Container(
+          height: double.infinity,
+          color: Colors.red,
+          child: Padding(
+            padding: const EdgeInsets.all(32.0),
+            child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Flutterで',
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                    Text(
+                      'アプリ開発',
+                    )
+                  ]
+            ),
+          ),
         )
       )
     );
@@ -91,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text('タイトルテスト'),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
