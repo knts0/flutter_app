@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MyHomePage(title: "タイトル"));
 }
 
 class MyApp extends StatelessWidget {
@@ -29,11 +29,6 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Container()
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: _incrementCounter,
-          tooltip: 'Increment',
-          child: Icon(Icons.add),
         ),
       )
     );
