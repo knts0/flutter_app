@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyHomePage(title: "タイトル"));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -23,14 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('タイトル'),
-        ),
-        body: Center(
-          child: Container()
-        ),
-      )
+      home: MyHomePage(title: 'タイトル')
     );
   }
 }
