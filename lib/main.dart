@@ -75,7 +75,10 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('タイトルテスト'),
       ),
       body: Center(
-        child: Container()
+        child: RaisedButton(
+          child: Text('次へ'),
+          onPressed: () {},
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
