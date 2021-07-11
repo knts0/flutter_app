@@ -24,29 +24,17 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        backgroundColor: Colors.yellow,
         appBar: AppBar(
           title: Text('タイトル'),
-          actions: <Widget>[Icon(Icons.add)],
         ),
-        body: Container(
-          height: double.infinity,
-          color: Colors.red,
-          child: Padding(
-            padding: const EdgeInsets.all(32.0),
-            child: Row(
-                  children: <Widget>[
-                    Text(
-                      'Flutterで',
-                      style: TextStyle(color: Colors.blue),
-                    ),
-                    Text(
-                      'アプリ開発',
-                    )
-                  ]
-            ),
-          ),
-        )
+        body: Center(
+          child: Container()
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: _incrementCounter,
+          tooltip: 'Increment',
+          child: Icon(Icons.add),
+        ),
       )
     );
   }
@@ -99,12 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('タイトルテスト'),
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: RaisedButton(
-          child: Text('次へ'),
-          onPressed: () {},
-        ),
+        child: Container()
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
