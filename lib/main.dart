@@ -64,6 +64,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final myFocusNode = FocusNode();
 
+  String name;
+
+  final myController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -82,14 +86,24 @@ class _MyHomePageState extends State<MyHomePage> {
         width: double.infinity,
         child: Column(
           children: [
-            TextField(),
             TextField(
-              focusNode: myFocusNode,
+              decoration: InputDecoration(
+                hintText: '名前',
+              ),
+              onChanged: (text) {
+                name = text;
+              }
+            ),
+            TextField(
+              controller: myController,
+              decoration: InputDecoration(
+                hintText: '趣味'
+              ),
             ),
             RaisedButton(
-              child: Text('フォーカス'),
+              child: Text('新規登録'),
               onPressed: () {
-                myFocusNode.requestFocus();
+                final hobbyText = myController.text;
               },
             ),
           ],
