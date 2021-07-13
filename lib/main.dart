@@ -62,6 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  final myFocusNode = FocusNode();
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -76,17 +78,20 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text('タイトルテスト'),
       ),
-      body: Center(
+      body: Container(
+        width: double.infinity,
         child: Column(
           children: [
-            Container(
-              width: double.infinity,
-              child: Text(
-                'AAA',
-                textAlign: TextAlign.center,
-              ),
+            TextField(),
+            TextField(
+              focusNode: myFocusNode,
             ),
-            Text('BBB'),
+            RaisedButton(
+              child: Text('フォーカス'),
+              onPressed: () {
+                myFocusNode.requestFocus();
+              },
+            ),
           ],
         ),
       ),
