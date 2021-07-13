@@ -62,12 +62,6 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  final myFocusNode = FocusNode();
-
-  String name;
-
-  final myController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -84,30 +78,22 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         width: double.infinity,
-        child: Column(
-          children: [
-            TextField(
-              decoration: InputDecoration(
-                hintText: '名前',
-              ),
-              onChanged: (text) {
-                name = text;
-              }
+        child: ListView(
+          children: <Widget>[
+            ListTile(
+              leading: Icon(Icons.map),
+              title: Text('Map'),
             ),
-            TextField(
-              controller: myController,
-              decoration: InputDecoration(
-                hintText: '趣味'
-              ),
+            ListTile(
+              leading: Icon(Icons.photo_album),
+              title: Text('Album'),
             ),
-            RaisedButton(
-              child: Text('新規登録'),
-              onPressed: () {
-                final hobbyText = myController.text;
-              },
-            ),
+            ListTile(
+              leading: Icon(Icons.phone),
+              title: Text('Phone'),
+            )
           ],
-        ),
+        )
       ),
     );
   }
