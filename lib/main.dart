@@ -79,17 +79,14 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           children: [
-            Image.network(
-              'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
-            RaisedButton(
-              child: Text('次へ'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => NextPage('value')),
-                );
-              },
+            Container(
+              width: double.infinity,
+              child: Text(
+                'AAA',
+                textAlign: TextAlign.center,
+              ),
             ),
+            Text('BBB'),
           ],
         ),
       ),
