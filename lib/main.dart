@@ -77,21 +77,22 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('タイトルテスト'),
       ),
       body: Center(
-        child: RaisedButton(
-          child: Text('次へ'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => NextPage('value')),
-            );
-          },
+        child: Column(
+          children: [
+            Image.network(
+              'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+            RaisedButton(
+              child: Text('次へ'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NextPage('value')),
+                );
+              },
+            ),
+          ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
